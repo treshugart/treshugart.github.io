@@ -30,6 +30,10 @@ address {
 	margin-bottom: 0;
 }
 
+article {
+	margin-left: 15px;
+}
+
 date {
 	font-style: italic;
 	margin: .5em 0;
