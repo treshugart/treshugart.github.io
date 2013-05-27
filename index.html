@@ -1,135 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <title>Trey Shugart - Web Guru</title>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/index.css">
+        <title>Trey Shugart - Software Guy</title>
+        <link rel="stylesheet/less" href="less/app.less">
+        <script src="components/less.js/dist/less-1.4.0-beta.js"></script>
+        <script data-main="js/app.js" src="components/requirejs/require.js"></script>
     </head>
     <body>
         <div class="container">
-            <header id="header" class="text-center">
-                <h1><a href="http://iamtres.com">Tre<span>y</span>S<span>hugart</span></a></h1>
-                <h2>Web Guru</h2>
-                <address><a href="http://maps.google.com.au/maps/place?q=99+Ferry+Rd,+Glebe+NSW&amp;hl=en&amp;ftid=0x6b12ae2d4aae2995:0xc06a51f0ca1187d6">Glebe, NSW, Australia</a></address>
-                <address><a href="mailto:treshugart@gmail.com">treshugart@gmail.com</a></address>
-            </header>
-            
-            <section id="work">
-                <header>
-                    <h3>Work</h3>
+            <div class="row">
+                <header class="span4" data-spy="affix">
+                    <h1><a href="http://iamtres.com">Tre<span>y</span>S<span>hugart</span></a></h1>
+                    <h2>Software Guy</h2>
+                    <address><a href="http://maps.google.com.au/maps/place?q=+Glebe+NSW+Australia&amp;hl=en&amp;ftid=0x6b12ae2d4aae2995:0xc06a51f0ca1187d6">Glebe, NSW, Australia</a></address>
+                    <address><a href="mailto:treshugart@gmail.com">treshugart@gmail.com</a></address>
                 </header>
-                
-                <article class="job">
-                    <header>
-                        <h4><a href="http://tequila.com.au/">Tequila</a></h4>
-                        <h5>October 2011 to ...</h5>
-                    </header>
-                    <div class="graph"></div>
-                    <p>Currently I am freelancing with a company called Tequila as a Senior Frontend Developer. We are using <a href="http://documentcloud.github.com/backbone">Backbone</a>, <a href="http://knockoutjs.com">Knockout</a> and <a href="http://jquery.com">jQuery</a> to drive our UIs. <a href="http://github.com/treshugart/Jive">Jive</a> is also being used for cross-browser <code><a href="https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history">history.pushState()</a></code> functionality and controller routing.</p>
-                </article>
-                
-                <article class="job">
-                    <header>
-                        <h4><a href="http://viocorp.com">Viocorp</a></h4>
-                        <h5>April 2010 to July 2011</h5>
-                    </header>
-                    <div class="graph"></div>
-                    <p>I worked as head of PHP on a proprietary CMS to make very tight deadlines on six sites for the largest broadcast company in Malaysia: Media Prima. The CMS was built on top of PHP, Red Hat, Apache and SQL Server on Windows Server 2008. Deployment was automated using Ruby's own Capistrano.</p>
-                    <p>We also built a simple HTTP JSON-based chat server using PHP, Ruby, MongoDB and Nginx that scaled past a concurrency of 4000 requests on two boxes that shared a replica set of two MongoDB instances. Deployment was also automated via Capistrano.</p>
-                    <p>Both the CMS and Chat server were built on top of <a href="http://europaphp.org">EuropaPHP</a>.</p>
-                    <p>The work I did at Viocorp was some of the coolest work I've done to date. On top of that the team there was my second family. Great people.</p>
-                </article>
-                
-                <article class="job">
-                    <header>
-                        <h4><a href="http://interspire.com">Interspire</a> / <a href="http://bigcommerce.com">Big Commerce</a></h4>
-                        <h5>April 2009 to April 2010</h5>
-                    </header>
-                    <div class="graph"></div>
-                    <p>I was a Lead Developer and Senior Software Engineer when Big Commerce was Interspire. I was originally brought in to work on Interspire Website Publisher as a Senior Software Engineer and moved to be Lead Engineer of Interspire Email Marketer after a few months. I then moved on to Interspire Shopping Cart which is now hosted as Big Commerce.</p>
-                    <p>I can't say enough good things about the team at Big Commerce. They are a bunch of very bright individuals who taught me a lot and made work not seem so much like work.</p>
-                </article>
-                
-                <article class="job">
-                    <header>
-                        <h4><a href="http://solution4.net.au">Solution 4</a></h4>
-                        <h5>April 2008 to April 2009</h5>
-                    </header>
-                    <div class="graph"></div>
-                    <p>At Solution 4, I had a great deal of influence on the user experience of the CRM that we were building. The jQuery and X/HTML driven front-end was built on top of PHP 5.2+ backed by MySQL, running under Apache and held together by Fedora.</p>
-                    <p>The best part about working for Solution 4 was how well the developers worked together. I met some really great people there. It was an experience I will never forget.</p>
-                </article>
-                
-                <article class="job">
-                    <header>
-                        <h4><a href="http://s3group.com.au">S3 Group</a></h4>
-                        <h5>January 2008 to April 2008</h5>
-                    </header>
-                    <div class="graph"></div>
-                    <p>During my employment at S3 Group, I worked with an array of technologies. I worked with CMSs, MVC frameworks, eCommerce, and a multitude of front-end technologies. <a href="http://europaphp.org">EuropaPHP</a> even powered a few of their sites.</p>
-                    <p>S3 Group gave me my first job in Australia. They were a couple of really nice guys who did very focused, solid work.</p>
-                </article>
-                
-                <article class="job">
-                    <header>
-                        <h4>Freelance</h4>
-                        <h5>January 2006 to 2009</h5>
-                    </header>
-                    <div class="graph"></div>
-                    <p>This is where it all started. The foray into a world what was once simply a passion that I indulged in to sate my inner nerd. This is also where I got most of my inspiration early on because I got to work with so many different people.</p>
-                </article>
-            </section>
-            
-            <section id="fun">
-                <header>
-                    <h3>Play</h3>
-                </header>
-                
-                <article class="cool">
-                    <header>
-                        <h4><a href="http://github.com/treshugart">Github</a></h4>
-                    </header>
-                    <p>Github is probably the best resume a programmer could ever have. I currently have <a href="http://github.com/treshugart">11</a> repositories, all of which I actively maintain.</p>
-                </article>
-                
-                <article class="cool">
-                    <header>
-                        <h4><a href="http://europaphp.org">EuropaPHP</a> on <a href="http://github.com/treshugart/EuropaPHP">Github</a></h4>
-                    </header>
-                    <p>Yes, another PHP framework. The only difference is that it's faster, more efficient, more focused and more standards compliant than any other PHP framework.</p>
-                </article>
-            </section>
-            
-            <section id="education">
-                <header>
-                    <h3>Learn</h3>
-                </header>
-                
-                <article class="education">
-                    <header>
-                        <h4>University of Me</h4>
-                        <h5>1997 to ...</h5>
-                    </header>
-                    <p>The best way to learn something is to do it.</p>
-                </article>
-                
-                <article class="education">
-                    <header>
-                        <h4>Cabrillo College A.S. Fire Technology</h4>
-                        <h5>2005</h5>
-                    </header>
-                    <address><a href="http://maps.google.com.au/maps/place?q=Cabrillo+College,+Aptos,+California,+USA&amp;hl=en&amp;cid=4424382561881955222">Aptos, California, USA</a></address>
-                    <p>I originally went to school and training to be a fire fighter but ended up following my passion as a developer.</p>
-                </article>
-            </section>
-            
-            <footer class="text-center">
-                <h4>made possible with</h4>
-                <ul>
-                    <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
-                </ul>
-            </footer>
+
+                <div class="span8">
+                    <section>
+                        <header>
+                            <h3>Work</h3>
+                        </header>
+
+                        <article>
+                            <header>
+                                <h4>R&amp;D Tech Lead @ <a href="http://ultraserve.com.au">UltraServe</a></h4>
+                                <h5>February 2013</h5>
+                            </header>
+                            <p>I was brought into UltraServe to lay a foundation and set up a framework for a new Research and Development project that allows people to manage their entire infrastucture both easily and effectively. My role here requires me to be adroit in many different technologies so that the well written, polyglot codebase will function well now and into the future.</p>
+                            <p>The goal was to modularise each aspect, use the right tool for the right job and maintain over 60% code coverage all while keeping technical debt to a minimum. Currently, we have almost 80% code coverage, use PHP, Ruby, JavaScript (both Node and browser), HTML5, PosgreSQL and MongoDB. Each part of the application is functionally modularised into separate components and there is almost zero technical debt.</p>
+                        </article>
+
+                        <article>
+                            <header>
+                                <h4>Freelancer @ <a href="http://tequila.com.au/">Tequila</a></h4>
+                                <h5>October 2011 &mdash; February 2012</h5>
+                            </header>
+                            <p>I worked as a freelance JavaScript developer for Tequila and although it was a short stint, I played a major role in mentoring a small group of developers while implementing new technologies for the projects that I worked on. In that time, I had the opportunity to work on many small projects as well as the Reserve Bank of Australia's Banknotes website which included three JavaScript games:</p>
+                            <ul>
+                                <li><a href="http://banknotes.rba.gov.au/banknotechallenge.html">Banknote Challenge</a></li>
+                                <li><a href="http://banknotes.rba.gov.au/eyespy.html">Eye Spy</a></li>
+                                <li><a href="http://banknotes.rba.gov.au/banknotepuzzle.html">Banknote Puzzle</a></li>
+                            </ul>
+                        </article>
+
+                        <article>
+                            <header>
+                                <h4>Lead Developer @ <a href="http://viocorp.com">Viocorp</a></h4>
+                                <h5>April 2010 &mdash; July 2011</h5>
+                            </header>
+                            <p>I worked as head of PHP on a proprietary CMS to make very tight deadlines on six sites for the largest broadcast company in Malaysia: Media Prima. On top developing the CMS, we also built a simple RESTful chat server on top of EuropaPHP that scaled past a concurrency of 4000 requests on two boxes that shared a replica set of two MongoDB instances. Viocorp gave me the opportunity to push my boundaries both personally and professionally which is attributed to both the intesity of the job as well as the integrity of the people I had the pleasure of working with.</p>
+                        </article>
+
+                        <article>
+                            <header>
+                                <h4>Senior Software Engineer @ <a href="http://interspire.com">Interspire</a> / <a href="http://bigcommerce.com">Big Commerce</a></h4>
+                                <h5>April 2009 &mdash; April 2010</h5>
+                            </header>
+                            <p>I was a Lead Developer and Senior Software Engineer when Big Commerce was Interspire. I was originally brought in to work on Interspire Website Publisher as a Senior Software Engineer and moved to be Lead Engineer of Interspire Email Marketer after a few months. I then moved on to Interspire Shopping Cart which is now hosted as Big Commerce. I can't say enough good things about the team at Big Commerce. They are a bunch of very bright individuals who taught me a lot about myself and my work.</p>
+                        </article>
+
+                        <article>
+                            <header>
+                                <h4>Senior Developer @ <a href="http://solution4.net.au">Solution 4</a></h4>
+                                <h5>April 2008 &mdash; April 2009</h5>
+                            </header>
+                            <p>The goal of Solution 4 was to address the clunky, slow and malnourished pool of solutions with a fresh take on a Financial CRM. Although I did a healthy amount of PHP development, I was the most senior JavaScript developer so I naturally took responsibility in mentoring the other employees where necessary to ensure that everything front-end was done properly. Not only did I learn a lot about myself and my abilities, Solution 4 taught me the importance of a solid, cohesive team.</p>
+                        </article>
+
+                        <article>
+                            <header>
+                                <h4>Web Developer @ <a href="http://s3group.com.au">S3 Group</a></h4>
+                                <h5>January 2008 &mdash; April 2008</h5>
+                            </header>
+                            <p>During my employment at S3 Group, I worked with an array of technologies from CMSs amd MVC frameworks to eCommerce solutions and a multitude of front-end technologies. EuropaPHP even powered a few of their sites. S3 Group gave me my first job in Australia and was my first real plunge into the commercial world of web development. They were a couple of really nice guys who had a passion doing things right.</p>
+                        </article>
+
+                        <article>
+                            <header>
+                                <h4>Freelance</h4>
+                                <h5>January 2006 &mdash; 2009</h5>
+                            </header>
+                            <p>This is where it all started. The foray into a world what was once simply a passion that I indulged in to sate my inner nerd. This is also where I got most of my inspiration early on because I got to work with so many talented people.</p>
+                        </article>
+                    </section>
+
+                    <section id="education">
+                        <header>
+                            <h3>Learn</h3>
+                        </header>
+
+                        <article>
+                            <header>
+                                <h4>Cabrillo College A.S. Fire Technology</h4>
+                                <h5>2005</h5>
+                            </header>
+                            <address><a href="http://maps.google.com.au/maps/place?q=Cabrillo+College,+Aptos,+California,+USA&amp;hl=en&amp;cid=4424382561881955222">Aptos, California, USA</a></address>
+                            <p>I originally went to school and training to be a fire fighter but ended up following my passion as a developer.</p>
+                        </article>
+                    </section>
+
+                    <section id="fun">
+                        <header>
+                            <h3>Play</h3>
+                        </header>
+
+                        <article id="europaphp">
+                            <header>
+                                <h4><a href="http://github.com/europaphp/europaphp">EuropaPHP</a></h4>
+                            </header>
+                            <p>EuropaPHP is my passion of the PHP world and although it doesn't have very many users, I don't feel a need to market it because I have nothing to prove. My discipline as a developer stems much from its development as do some of my personal and professional endeavours.</p>
+                        </article>
+
+                        <article id="github">
+                            <header>
+                                <h4><a href="http://github.com/treshugart">Github</a></h4>
+                            </header>
+                            <p>Github is probably the best resume a developer could ever have. Everything listed there is actively developed.</p>
+                        </article>
+                    </section>
+                </div>
+            </div>
         </div>
     </body>
 </html>
