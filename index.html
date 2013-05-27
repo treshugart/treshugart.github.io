@@ -4,38 +4,66 @@
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <title>Trey Shugart - Software Guy</title>
         <link rel="stylesheet/less" href="less/app.less">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
         <script src="components/less.js/dist/less-1.4.0-beta.js"></script>
         <script data-main="js/app.js" src="components/requirejs/require.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <header class="span4" data-spy="affix">
-                    <h1><a href="http://iamtres.com">Tre<span>y</span>S<span>hugart</span></a></h1>
-                    <h2>Software Guy</h2>
-                    <address><a href="http://maps.google.com.au/maps/place?q=+Glebe+NSW+Australia&amp;hl=en&amp;ftid=0x6b12ae2d4aae2995:0xc06a51f0ca1187d6">Glebe, NSW, Australia</a></address>
-                    <address><a href="mailto:treshugart@gmail.com">treshugart@gmail.com</a></address>
-                </header>
+                <div class="span4">
+                    <header class="span4" data-spy="affix">
+                        <ul class="thumbnails">
+                            <li>
+                                <a class="thumbnail" href="http://treshugart.github.com">
+                                    <img src="http://www.gravatar.com/avatar/a6e16fabd3b79794814c6f8f562d61ce.png?s=200">
+                                </a>
+                            </li>
+                        </ul>
+                        <h1>Trey Shugart</h1>
+                        <p>I am an extremely passionate software developer and mentor who loves building clean, effective solutions.</p>
+                        <address class="btn-group">
+                            <a class="btn" href="http://maps.google.com.au/maps/place?q=+Glebe+NSW+Australia&amp;hl=en&amp;ftid=0x6b12ae2d4aae2995:0xc06a51f0ca1187d6" title="Map"><i class="icon-large icon-globe"></i></a>
+                            <a class="btn" href="mailto:treshugart@gmail.com" title="Email"><i class="icon-large icon-envelope-alt"></i></a>
+                            <a class="btn" href="http://github.com/treshugart" title="Github"><i class="icon-large icon-github"></i></a>
+                            <a class="btn" href="http://github.com/treshugart" title="Linkedin"><i class="icon-large icon-linkedin"></i></a>
+                            <a class="btn" href="http://twitter.com/treshugart" title="Twitter"><i class="icon-large icon-twitter"></i></a>
+                        </address>
+                    </header>
+                </div>
 
                 <div class="span8">
-                    <section>
-                        <header>
-                            <h3>Work</h3>
-                        </header>
-
-                        <article>
+                    <div class="row">
+                        <aside class="span2">
+                            <a href="#" class="skill skill-1">PHP</a>
+                            <a href="#" class="skill skill-2">HTML, CSS, JS</a>
+                            <a href="#" class="skill skill-3">Mongo, Postgres</a>
+                            <a href="#" class="skill skill-4">Mentoring</a>
+                            <a href="#" class="skill skill-5">Full Agile</a>
+                            <a href="#" class="skill skill-6">Nginx</a>
+                            <a href="#" class="skill skill-7">Ruby</a>
+                            <a href="#" class="skill skill-8">Management</a>
+                        </aside>
+                        <article class="span6">
                             <header>
-                                <h4>R&amp;D Tech Lead @ <a href="http://ultraserve.com.au">UltraServe</a></h4>
-                                <h5>February 2013</h5>
+                                <h3>R&amp;D Tech Lead @ <a href="http://ultraserve.com.au">UltraServe</a></h3>
+                                <h4>February 2013</h4>
                             </header>
-                            <p>I was brought into UltraServe to lay a foundation and set up a framework for a new Research and Development project that allows people to manage their entire infrastucture both easily and effectively. My role here requires me to be adroit in many different technologies so that the well written, polyglot codebase will function well now and into the future.</p>
+                            <p>I was brought into UltraServe to set up a framework for a new Research and Development project that allows people to manage their entire cloud infrastucture both easily and effectively. My role here requires me to be adroit in many different technologies so that the well written, polyglot codebase will function well now and into the future.</p>
                             <p>The goal was to modularise each aspect, use the right tool for the right job and maintain over 60% code coverage all while keeping technical debt to a minimum. Currently, we have almost 80% code coverage, use PHP, Ruby, JavaScript (both Node and browser), HTML5, PosgreSQL and MongoDB. Each part of the application is functionally modularised into separate components and there is almost zero technical debt.</p>
                         </article>
+                    </div>
 
-                        <article>
+                    <div class="row">
+                        <aside class="span2">
+                            <a href="#" class="skill skill-1">HTML, CSS, JS</a>
+                            <a href="#" class="skill skill-2">Mentoring</a>
+                            <a href="#" class="skill skill-3">Pseudo-Kanban</a>
+                        </aside>
+                        <article class="span6">
                             <header>
-                                <h4>Freelancer @ <a href="http://tequila.com.au/">Tequila</a></h4>
-                                <h5>October 2011 &mdash; February 2012</h5>
+                                <h3>Freelancer @ <a href="http://tequila.com.au/">Tequila</a></h3>
+                                <h4>October 2011 &mdash; February 2012</h4>
                             </header>
                             <p>I worked as a freelance JavaScript developer for Tequila and although it was a short stint, I played a major role in mentoring a small group of developers while implementing new technologies for the projects that I worked on. In that time, I had the opportunity to work on many small projects as well as the Reserve Bank of Australia's Banknotes website which included three JavaScript games:</p>
                             <ul>
@@ -44,82 +72,87 @@
                                 <li><a href="http://banknotes.rba.gov.au/banknotepuzzle.html">Banknote Puzzle</a></li>
                             </ul>
                         </article>
+                    </div>
 
-                        <article>
+                    <div class="row">
+                        <aside class="span2">
+                            <a href="#" class="skill skill-1">PHP</a>
+                            <a href="#" class="skill skill-2">HTML, CSS, JS</a>
+                            <a href="#" class="skill skill-3">SQL Server, Mongo</a>
+                            <a href="#" class="skill skill-4">Nginx, Apache</a>
+                            <a href="#" class="skill skill-5">Pseudo-Agile</a>
+                            <a href="#" class="skill skill-6">Ruby</a>
+                        </aside>
+                        <article class="span6">
                             <header>
-                                <h4>Lead Developer @ <a href="http://viocorp.com">Viocorp</a></h4>
-                                <h5>April 2010 &mdash; July 2011</h5>
+                                <h3>Lead Developer @ <a href="http://viocorp.com">Viocorp</a></h3>
+                                <h4>April 2010 &mdash; July 2011</h4>
                             </header>
                             <p>I worked as head of PHP on a proprietary CMS to make very tight deadlines on six sites for the largest broadcast company in Malaysia: Media Prima. On top developing the CMS, we also built a simple RESTful chat server on top of EuropaPHP that scaled past a concurrency of 4000 requests on two boxes that shared a replica set of two MongoDB instances. Viocorp gave me the opportunity to push my boundaries both personally and professionally which is attributed to both the intesity of the job as well as the integrity of the people I had the pleasure of working with.</p>
                         </article>
+                    </div>
 
-                        <article>
+                    <div class="row">
+                        <aside class="span2">
+                            <a href="#" class="skill skill-1">PHP</a>
+                            <a href="#" class="skill skill-2">HTML, CSS, JS</a>
+                            <a href="#" class="skill skill-3">Pseudo-Agile</a>
+                        </aside>
+                        <article class="span6">
                             <header>
-                                <h4>Senior Software Engineer @ <a href="http://interspire.com">Interspire</a> / <a href="http://bigcommerce.com">Big Commerce</a></h4>
-                                <h5>April 2009 &mdash; April 2010</h5>
+                                <h3>Senior Software Engineer @ <a href="http://bigcommerce.com">Big Commerce</a></h3>
+                                <h4>April 2009 &mdash; April 2010</h4>
                             </header>
                             <p>I was a Lead Developer and Senior Software Engineer when Big Commerce was Interspire. I was originally brought in to work on Interspire Website Publisher as a Senior Software Engineer and moved to be Lead Engineer of Interspire Email Marketer after a few months. I then moved on to Interspire Shopping Cart which is now hosted as Big Commerce. I can't say enough good things about the team at Big Commerce. They are a bunch of very bright individuals who taught me a lot about myself and my work.</p>
                         </article>
+                    </div>
 
-                        <article>
+                    <div class="row">
+                        <aside class="span2">
+                            <a href="#" class="skill skill-1">HTML, CSS, JS</a>
+                            <a href="#" class="skill skill-2">PHP</a>
+                            <a href="#" class="skill skill-3">Databases</a>
+                            <a href="#" class="skill skill-4">Waterfall</a>
+                        </aside>
+                        <article class="span6">
                             <header>
-                                <h4>Senior Developer @ <a href="http://solution4.net.au">Solution 4</a></h4>
-                                <h5>April 2008 &mdash; April 2009</h5>
+                                <h3>Senior Developer @ <a href="http://solution4.net.au">Solution 4</a></h3>
+                                <h4>April 2008 &mdash; April 2009</h4>
                             </header>
                             <p>The goal of Solution 4 was to address the clunky, slow and malnourished pool of solutions with a fresh take on a Financial CRM. Although I did a healthy amount of PHP development, I was the most senior JavaScript developer so I naturally took responsibility in mentoring the other employees where necessary to ensure that everything front-end was done properly. Not only did I learn a lot about myself and my abilities, Solution 4 taught me the importance of a solid, cohesive team.</p>
                         </article>
+                    </div>
 
-                        <article>
+                    <div class="row">
+                        <aside class="span2">
+                            <a href="#" class="skill skill-1" data-content="jQuery, X/HTML">HTML, CSS, JS</a>
+                            <a href="#" class="skill skill-2" data-content="EuropaPHP">PHP</a>
+                            <a href="#" class="skill skill-3">MySQL</a>
+                            <a href="#" class="skill skill-4">Waterfall</a>
+                        </aside>
+                        <article class="span6">
                             <header>
-                                <h4>Web Developer @ <a href="http://s3group.com.au">S3 Group</a></h4>
-                                <h5>January 2008 &mdash; April 2008</h5>
+                                <h3>Web Developer @ <a href="http://s3group.com.au">S3 Group</a></h3>
+                                <h4>January 2008 &mdash; April 2008</h4>
                             </header>
                             <p>During my employment at S3 Group, I worked with an array of technologies from CMSs amd MVC frameworks to eCommerce solutions and a multitude of front-end technologies. EuropaPHP even powered a few of their sites. S3 Group gave me my first job in Australia and was my first real plunge into the commercial world of web development. They were a couple of really nice guys who had a passion doing things right.</p>
                         </article>
+                    </div>
 
-                        <article>
+                    <div class="row">
+                        <aside class="span2">
+                            <a href="#" class="skill skill-1">HTML, CSS, JS</a>
+                            <a href="#" class="skill skill-2">PHP</a>
+                            <a href="#" class="skill skill-3">MySQL</a>
+                        </aside>
+                        <article class="span6">
                             <header>
-                                <h4>Freelance</h4>
-                                <h5>January 2006 &mdash; 2009</h5>
+                                <h3>Freelance</h3>
+                                <h4>January 2006 &mdash; January 2009</h4>
                             </header>
                             <p>This is where it all started. The foray into a world what was once simply a passion that I indulged in to sate my inner nerd. This is also where I got most of my inspiration early on because I got to work with so many talented people.</p>
                         </article>
-                    </section>
-
-                    <section id="education">
-                        <header>
-                            <h3>Learn</h3>
-                        </header>
-
-                        <article>
-                            <header>
-                                <h4>Cabrillo College A.S. Fire Technology</h4>
-                                <h5>2005</h5>
-                            </header>
-                            <address><a href="http://maps.google.com.au/maps/place?q=Cabrillo+College,+Aptos,+California,+USA&amp;hl=en&amp;cid=4424382561881955222">Aptos, California, USA</a></address>
-                            <p>I originally went to school and training to be a fire fighter but ended up following my passion as a developer.</p>
-                        </article>
-                    </section>
-
-                    <section id="fun">
-                        <header>
-                            <h3>Play</h3>
-                        </header>
-
-                        <article id="europaphp">
-                            <header>
-                                <h4><a href="http://github.com/europaphp/europaphp">EuropaPHP</a></h4>
-                            </header>
-                            <p>EuropaPHP is my passion of the PHP world and although it doesn't have very many users, I don't feel a need to market it because I have nothing to prove. My discipline as a developer stems much from its development as do some of my personal and professional endeavours.</p>
-                        </article>
-
-                        <article id="github">
-                            <header>
-                                <h4><a href="http://github.com/treshugart">Github</a></h4>
-                            </header>
-                            <p>Github is probably the best resume a developer could ever have. Everything listed there is actively developed.</p>
-                        </article>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
