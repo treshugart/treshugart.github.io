@@ -1,5 +1,11 @@
 @import '../components/bootstrap/less/bootstrap';
 
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+}
+
 body {
     background-attachment: fixed;
     background-image: url(../img/gray.png);
