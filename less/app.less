@@ -1,8 +1,17 @@
 @import '../components/bootstrap/less/bootstrap';
 
 @media print {
-    a[href]:after {
-        content: none !important;
+    a.btn:after {
+        content: " " attr(title) ": " attr(href);
+    }
+
+    a.btn {
+        border: none;
+        display: block;
+        width: 270px;
+        text-align: left;
+        white-space: pre-wrap;
+        word-wrap: break-word;
     }
 }
 
