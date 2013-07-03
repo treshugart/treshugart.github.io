@@ -10,7 +10,5 @@
         }
     });
 
-    require(['bootstrap', 'jquery'], function(jq) {
-        jq('[data-spy*="affix"]').affix();
-    });
+    require(['bootstrap']);
 })();
