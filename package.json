@@ -1,0 +1,29 @@
+{
+  "name": "treshugart.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treshugart/treshugart.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treshugart/treshugart.github.io/issues"
+  },
+  "homepage": "https://github.com/treshugart/treshugart.github.io#readme",
+  "dependencies": {
+    "@skatejs/ssr": "^0.5.1",
+    "@skatejs/val": "^0.3.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "preact": "^8.1.0",
+    "skatejs": "^5.0.0-alpha.10"
+  }
+}

@@ -1,8 +1,0 @@
-{
-    "dependencies": {
-        "angular": "latest",
-        "bootstrap": "latest",
-        "less.js": "latest",
-        "requirejs": "latest"
-    }
-}
