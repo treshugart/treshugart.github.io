@@ -6,7 +6,7 @@ import { themed } from './utils/swc';
 import { Body } from './comps';
 
 const Page = require('./pages').default;
-const Theme = themed('default', {
+const Theme = themed({
   backgroundColor: '#fffcf7',
   color: '#333',
   grid: 10

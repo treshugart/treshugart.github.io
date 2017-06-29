@@ -1,6 +1,14 @@
 import { styled } from '../utils/swc';
 
-export const Body = styled('body', ({ backgroundColor, color, grid }) => `
+export const Align = styled(({ type }) => `
+  text-align: ${type};
+`);
+
+export const Avatar = styled(`
+  border-radius: 50%;
+`, 'img');
+
+export const Body = styled(({ backgroundColor, color, grid }) => `
   background-color: ${backgroundColor || 'white'};
   color: ${color || '#333'};
   display: block;
@@ -8,7 +16,7 @@ export const Body = styled('body', ({ backgroundColor, color, grid }) => `
   height: 100%;
   margin: -8px;
   padding: ${grid}px;
-`, 'div');
+`);
 
 const heading = ({ grid, headingBackgroundColor }) => `
   background-color: ${headingBackgroundColor || 'transparent'};
@@ -17,13 +25,20 @@ const heading = ({ grid, headingBackgroundColor }) => `
   padding: 0px;
 `;
 
-export const H1 = styled('h1', heading);
-export const H2 = styled('h2', props => `
+export const H1 = styled(heading, 'h1');
+export const H2 = styled(props => `
   ${heading(props)}
   font-size: 20px;
   font-weight: normal;
-`);
+`, 'h2');
 
-export const P = styled('p', ({ grid }) => `
+const p = ({ grid }) => `
   margin: ${grid}px 0;
-`);
+`;
+
+export const P = styled(p, 'p');
+
+export const Note = styled((props) => `
+  ${p(props)}
+  font-size: 10px;
+`, 'p');
