@@ -2,9 +2,8 @@
 # yarn lockfile v1
 
 
-"@skatejs/ssr@^0.6.1":
+"@skatejs/ssr@file:../../skatejs/ssr":
   version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@skatejs/ssr/-/ssr-0.6.1.tgz#d51dfb6ec1e93b15eeb44ae8ef4be060c0104c37"
   dependencies:
     parse5 "^3.0.2"
     preact "^8.1.0"
@@ -611,9 +610,12 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-skatejs@^5.0.0-alpha.10, skatejs@^5.0.0-alpha.7:
-  version "5.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/skatejs/-/skatejs-5.0.0-alpha.10.tgz#ba4915ff1f768ac605abee39559296a9d3bbf8a8"
+skatejs@^5.0.0-alpha.7:
+  version "5.0.0-alpha.12"
+  resolved "https://registry.yarnpkg.com/skatejs/-/skatejs-5.0.0-alpha.12.tgz#644a4a2b01877a13b5e24b88a6e9f1e1f41f958c"
+
+"skatejs@file:../../skatejs/skatejs":
+  version "5.0.0-alpha.12"
 
 slash@^1.0.0:
   version "1.0.0"

@@ -1,4 +1,52 @@
-<script>function __ssr(){var a=document.currentScript.previousElementSibling,b=a.firstElementChild;a.removeChild(b);for(var c=a.attachShadow({mode:"open"});b.hasChildNodes();)c.appendChild(b.firstChild);}</script><x-element-11><shadow-root><html><head><meta name="google-site-verification", content="RQC7x29gWdBQabk-N2fbERaNjGckTk7zhDWLcpLw1e0"></meta></head><body><x-element-9><x-class-2><shadow-root><div><style>div{
+
+    <script>
+      function __ssr () {
+        const script = document.currentScript;
+        const fakeShadowRoot = script.parentNode;
+        const host = fakeShadowRoot.parentNode;
+        const move = (from, to) => { while (from && from.firstChild) to.appendChild(from.firstChild) };
+
+        // This cleans up the resulting DOM but also seems to have a positive impact on performance.
+        fakeShadowRoot.removeChild(script);
+
+        // First thing we do is remove the fake shadow root so we can attach a shadow root safely.
+        host.removeChild(fakeShadowRoot);
+
+        // Create the real shadow root once we've cleaned up.
+        const realShadowRoot = host.attachShadow({ mode: 'open' });
+
+        // Then we can move stuff over from the fake root to the real one.
+        move(fakeShadowRoot, realShadowRoot);
+
+        // We must find the slots *after* the shadow root is hydrated so we don't get any unwanted ones.
+        const slots = realShadowRoot.querySelectorAll('slot');
+
+        // At each Shadow Root, we only care about its slots, not composed slots,
+        // therefore we need to move the children of top level slots, but not others
+        // Also can't 'move' in loop as that will mutate the DOM and ruin the
+        // 'contains' checks for subsequent slots.
+        const topLevelSlots = (() => {
+          let top = [],
+              ref;
+
+          for (let i = 0, k = slots.length; i < k; i++) {
+            const slot = slots[i];
+
+            // Ref is last known top level slot, if current slot is contained by it,
+            // then that slot is nested and can be ignored
+            if (!(ref && ref.contains(slot))) {
+              top.push(slot);
+              ref = slot;
+            }
+          }
+
+          return top;
+        })();
+
+        topLevelSlots.forEach(slot => move(slot, host));
+      }
+    </script>
+  <x-element-11><shadow-root><x-element-9><x-class-2><shadow-root><div><style>div{
   background-color: #fffcf7;
   color: #333;
   display: block;
@@ -6,7 +54,7 @@
   height: 100%;
   margin: -8px;
   padding: 10px;
-}</style><slot></slot></div></shadow-root><x-element-8><shadow-root><div><style>
+}</style><slot><x-element-8><shadow-root><div><style>
           a { color: #915a00; }
         </style><x-class-7><shadow-root><div><style>div{
   background-color: #ffefd5;
@@ -17,21 +65,21 @@
   margin: 100px auto;
   padding: 20px;
   width: 400px;
-}</style><slot></slot></div></shadow-root><x-class><shadow-root><div type="center"><style>div{
+}</style><slot><x-class><shadow-root><div type="center"><style>div{
   text-align: center;
-}</style><slot></slot></div></shadow-root><x-class-1><shadow-root><img src="http://2.gravatar.com/avatar/a6e16fabd3b79794814c6f8f562d61ce?size=200"><style>img{
+}</style><slot><x-class-1><shadow-root><img src="http://2.gravatar.com/avatar/a6e16fabd3b79794814c6f8f562d61ce?size=200"><style>img{
   border-radius: 50%;
-}</style><slot></slot></img></shadow-root></x-class-1><script>__ssr()</script></x-class><script>__ssr()</script><x-class-5><shadow-root><p><style>p{
+}</style><slot default=""></slot></img><script>__ssr()</script></shadow-root></x-class-1></slot></div><script>__ssr()</script></shadow-root></x-class><x-class-5><shadow-root><p><style>p{
   margin: 10px 0;
-}</style><slot></slot></p></shadow-root>Heyo, I'm Trey and I'm currently working on redoing this to be both a blog as well as my resume.</x-class-5><script>__ssr()</script><x-class-5><shadow-root><p><style>p{
+}</style><slot>Heyo, I'm Trey and I'm currently working on redoing this to be both a blog as well as my resume.</slot></p><script>__ssr()</script></shadow-root></x-class-5><x-class-5><shadow-root><p><style>p{
   margin: 10px 0;
-}</style><slot></slot></p></shadow-root>There's some pretty bleeding edge stuff going on here:</x-class-5><script>__ssr()</script><ul><li>Server-side rendered, and statically generated web components.</li><li>Web components created with <a href="https://github.com/skatejs/skatejs">skatejs</a> and rendered with <a href="https://github.com/developit/preact">preact</a>.</li><li>A form of Styled Components, but using Shadow DOM to do the heavy lifting.</li></ul><x-class-5><shadow-root><p><style>p{
+}</style><slot>There's some pretty bleeding edge stuff going on here:</slot></p><script>__ssr()</script></shadow-root></x-class-5><ul><li>Server-side rendered, and statically generated web components.</li><li>Web components created with <a href="https://github.com/skatejs/skatejs">skatejs</a> and rendered with <a href="https://github.com/developit/preact">preact</a>.</li><li>A form of Styled Components, but using Shadow DOM to do the heavy lifting.</li></ul><x-class-5><shadow-root><p><style>p{
   margin: 10px 0;
-}</style><slot></slot></p></shadow-root>You can check out the source at <a href="https://github.com/treshugart/treshugart.github.io">treshugart/treshugart.github.io</a>.</x-class-5><script>__ssr()</script><x-class-6><shadow-root><p><style>p{
+}</style><slot>You can check out the source at <a href="https://github.com/treshugart/treshugart.github.io">treshugart/treshugart.github.io</a>.</slot></p><script>__ssr()</script></shadow-root></x-class-5><x-class-6><shadow-root><div><style>div{
   
   margin: 10px 0;
 
   font-size: 10px;
-}</style><slot></slot></p></shadow-root><x-class><shadow-root><div type="center"><style>div{
+}</style><slot><div><x-class><shadow-root><div type="center"><style>div{
   text-align: center;
-}</style><slot></slot></div></shadow-root><a href="https://twitter.com/treshugart">@treshugart</a> | <a href="https://github.com/treshugart ">github</a></x-class><script>__ssr()</script></x-class-6><script>__ssr()</script></x-class-7><script>__ssr()</script></div></shadow-root></x-element-8><script>__ssr()</script></x-class-2><script>__ssr()</script></x-element-9></body></html></shadow-root></x-element-11><script>__ssr()</script>
+}</style><slot><a href="https://twitter.com/treshugart">@treshugart</a> | <a href="https://github.com/treshugart ">github</a></slot></div><script>__ssr()</script></shadow-root></x-class></div></slot></div><script>__ssr()</script></shadow-root></x-class-6></slot></div><script>__ssr()</script></shadow-root></x-class-7></div><script>__ssr()</script></shadow-root></x-element-8></slot></div><script>__ssr()</script></shadow-root></x-class-2></x-element-9><script>__ssr()</script></shadow-root></x-element-11>
