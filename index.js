@@ -7,5 +7,8 @@ require("babel-register")({
 const fs = require("fs");
 const render = require("@skatejs/ssr");
 const App = require("./src").default;
+const scripts = `<script src="https://unpkg.com/@webcomponents/webcomponentsjs"></script>`;
 
-render(new App()).then(r => fs.writeFile("index.html", r, () => {}));
+render(new App()).then(r =>
+  fs.writeFile("index.html", `${scripts}${r}`, () => {})
+);
