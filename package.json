@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "ssr --src src/pages/** --out .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,13 +18,19 @@
   },
   "homepage": "https://github.com/treshugart/treshugart.github.io#readme",
   "dependencies": {
-    "@skatejs/ssr": "file:../../skatejs/ssr",
+    "@skatejs/ssr": "^0.7.0",
     "@skatejs/val": "^0.3.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
     "preact": "^8.1.0",
-    "skatejs": "file:../../skatejs/skatejs"
+    "skatejs": "^5.0.0-alpha.13"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "glob": "^7.1.2",
+    "mkdirp": "^0.5.1",
+    "yargs": "^8.0.2"
   }
 }

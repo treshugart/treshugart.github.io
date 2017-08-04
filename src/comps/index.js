@@ -1,4 +1,6 @@
-import { styled } from "../utils/swc";
+import { Component, define, props } from "skatejs";
+import { h } from "../utils";
+import { styled, themed } from "../utils/swc";
 
 export const Align = styled(
   ({ type }) => `
@@ -53,4 +55,36 @@ export const Note = styled(
   ${p(props)}
   font-size: 10px;
 `
+);
+
+const Theme = themed({
+  backgroundColor: "#fffcf7",
+  color: "#333",
+  grid: 10
+});
+
+const Head = define(
+  class extends Component {
+    static props = { content: props.array };
+    get renderRoot() {
+      return document.head;
+    }
+    renderCallback({ content }) {
+      return content;
+    }
+  }
+);
+
+export const Layout = define(
+  class extends Component {
+    renderCallback() {
+      return (
+        <Theme>
+          <Body>
+            <Page />
+          </Body>
+        </Theme>
+      );
+    }
+  }
 );
