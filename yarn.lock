@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@skatejs/ssr@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@skatejs/ssr/-/ssr-0.7.0.tgz#9ced53021b870f71d4a81a632e6b7f078a308aa9"
+"@skatejs/ssr@^0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@skatejs/ssr/-/ssr-0.7.1.tgz#b862d742bb2872116333333bc592c4cb7d069d10"
   dependencies:
     babel-register "^6.24.1"
     glob "^7.1.2"

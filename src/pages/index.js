@@ -3,10 +3,10 @@
 import { Component, define } from "skatejs";
 import { h } from "../utils";
 import { styled } from "../utils/swc";
-import { Align, Avatar, H1, Note, P } from "../comps";
+import { Align, Avatar, Body, H1, Layout, Note, P, Theme } from "../comps";
 
 const Main = styled(
-  ({ grid }) => `
+  ({ grid = 10 }) => `
   background-color: #ffefd5;
   border: 2px solid #ffd591;
   border-radius: 3px;
@@ -22,7 +22,7 @@ export default define(
   class extends Component {
     renderCallback() {
       return (
-        <div>
+        <Layout>
           <style>{`
           a { color: #915a00; }
         `}</style>
@@ -83,7 +83,7 @@ export default define(
               </div>
             </Note>
           </Main>
-        </div>
+        </Layout>
       );
     }
   }

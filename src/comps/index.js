@@ -1,3 +1,5 @@
+/** @jsx h */
+
 import { Component, define, props } from "skatejs";
 import { h } from "../utils";
 import { styled, themed } from "../utils/swc";
@@ -63,25 +65,13 @@ const Theme = themed({
   grid: 10
 });
 
-const Head = define(
-  class extends Component {
-    static props = { content: props.array };
-    get renderRoot() {
-      return document.head;
-    }
-    renderCallback({ content }) {
-      return content;
-    }
-  }
-);
-
 export const Layout = define(
   class extends Component {
     renderCallback() {
       return (
         <Theme>
           <Body>
-            <Page />
+            <slot />
           </Body>
         </Theme>
       );
