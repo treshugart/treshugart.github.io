@@ -46,7 +46,7 @@ export const H2 = styled(
   "h2"
 );
 
-const p = ({ grid }) => `
+const p = ({ grid = 10 }) => `
   margin: ${grid}px 0;
 `;
 
@@ -65,11 +65,33 @@ const Theme = themed({
   grid: 10
 });
 
+const Head = define(
+  class extends Component {
+    static props = { content: null };
+    get renderRoot() {
+      return document.head;
+    }
+    renderCallback({ content }) {
+      return content;
+    }
+  }
+);
+
 export const Layout = define(
   class extends Component {
     renderCallback() {
       return (
         <Theme>
+          <Head
+            content={
+              <meta
+                attrs={{
+                  name: "msvalidate.01",
+                  content: "23E87E1F97820E7430B04FEE9EAA46E8"
+                }}
+              />
+            }
+          />
           <Body>
             <slot />
           </Body>
